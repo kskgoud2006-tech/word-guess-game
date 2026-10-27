@@ -1,0 +1,141 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #ede9fe);
+  color: #1e293b;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 35px 25px;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(30, 41, 59, 0.15);
+}
+
+h1 {
+  color: #6d28d9;
+  margin-top: 0;
+}
+
+.subtitle {
+  color: #64748b;
+}
+
+.hint-box {
+  margin: 25px 0;
+  padding: 15px;
+  background: #f3e8ff;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+.word-display {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.letter-box {
+  min-width: 38px;
+  padding: 8px 4px;
+  border-bottom: 4px solid #8b5cf6;
+  font-size: 28px;
+  font-weight: bold;
+  color: #6d28d9;
+}
+
+.mistakes {
+  font-weight: bold;
+}
+
+.guess-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+input {
+  width: 150px;
+  padding: 12px;
+  border: 2px solid #c4b5fd;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #7c3aed;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5b21b6;
+}
+
+button:disabled {
+  background: #a78bfa;
+  cursor: not-allowed;
+}
+
+.guessed-letters {
+  color: #64748b;
+  overflow-wrap: anywhere;
+}
+
+.win-message {
+  color: #15803d;
+}
+
+.lose-message {
+  color: #dc2626;
+}
+
+.play-again {
+  margin-top: 10px;
+  background: #059669;
+}
+
+.play-again:hover {
+  background: #047857;
+}
+
+@media (max-width: 480px) {
+  .game-container {
+    padding: 25px 15px;
+  }
+
+  .letter-box {
+    min-width: 30px;
+    font-size: 23px;
+  }
+
+  .guess-form {
+    flex-wrap: wrap;
+  }
+}
